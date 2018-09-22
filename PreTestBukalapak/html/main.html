@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- main page -->
+    <div class="main-page">
+        <div class="product-img">
+            <img src="../assets/image.jpg" alt="">
+            <p>bestseller</p>
+        </div>
+        <div class="product-name">
+            <h1>Bose SoundLink</h1>
+            <p>Little speaker. Big goosebumps.</p>
+        </div>
+        <div class="pop-over">
+            <button onclick="document.getElementById('modal-wrapper').style.display = 'block'" class="quick-look"><img src="../assets/quicklook.svg" alt=""></button>
+            <button class="price">$199</button>
+        </div>
+    </div>
+
+    <!-- pop over / modal -->
+<div id="modal-wrapper">
+      <div id="popup-page">
+        <div class="img-list">
+            <div class="image-list">
+                <div class="best-seller-tag-pop-over"><p>bestseller</p></div>
+                <img src="../assets/image.jpg" alt="" id="img1"  class="img">
+                <img src="../assets/image2.jpg" alt="" id="img2" class="img">
+                <img src="../assets/image3.jpg" alt="" id="img3" class="img">
+            </div>
+            <div class="select-img">
+                <input type="radio" class="image-selector" name="radio" checked onclick="show1()">
+                <input type="radio" class="image-selector" name="radio" onclick="show2()">
+                <input type="radio" class="image-selector" name="radio" onclick="show3()">
+            </div>
+        </div>
+
+    <!-- about product -->
+        <div class="about-product">
+            <div class="description-product">
+            <h1>Bose SoundLink <br> $199</h1>
+            <p>wireless earphone for music lovers <br> who live to move.</p>
+            </div>
+
+            <!-- specification and features link -->
+        <div class="specification-and-features">
+            <ul id="active-links">
+                <li onclick="ToggleClass(this)" class="active"><a href="#specification-and-color" onclick="specification()">Specification</a></li>
+                <li onclick="ToggleClass(this)" class="off"><a href="#features" onclick="feature()">Features</a></li>
+            </ul>
+
+           <!-- specification section -->
+            <div id="specification-and-color">
+                <div class="specification">
+                    <p><img src="../assets/check.svg">Up to 8 hours playtime</p>
+                    <p><img src="../assets/check.svg">Powerfull sound</p>
+                    <p><img src="../assets/check.svg">Wireless earphone</p>
+                </div>
+
+                <!-- choose color -->
+                <div class="choose-color">
+                    <h1>Choose your colors</h1>
+                    <form action="#">                     
+                        <input type="radio" value="one" id="radio-one" class="form-radio-grey" name="radio" checked>
+                        <input type="radio" value="one" id="radio-one" class="form-radio-black" name="radio">
+                        <input type="radio" value="one" id="radio-one" class="form-radio-orange" name="radio">
+                    </form>
+                </div>
+            </div>
+
+            <!-- features section -->
+            <div id="features">
+                <p><img src="../assets/check.svg">Bumpers for bumping</p>
+                <p><img src="../assets/check.svg">All sound. No seam</p>
+                <p><img src="../assets/check.svg">Grab and go</p>
+            </div>
+        </div>
+
+<!-- free shipping tagline -->
+        <div class="free-shipping-tagline">
+        <p><img src="../assets/check.svg">Freeshipping & returns + 2 years warranty </p>
+     </div>
+     
+        <!-- buy now section -->
+        <div class="cart">
+            <button class="cart-icon"><img src="../assets/cart.svg"></button>
+            <button class="buy-now">buy now</button>
+        </div>
+    </div>
+    <div class="close-modal-button">
+            <button id="close-modal" onclick="document.getElementById('modal-wrapper').style.display = 'none'"><i class="fas fa-times"></i></button>
+            </div>
+    </div>
+</div>
+
+    <script src="../javascript/main.js"></script>
+</body>
+</html>
